@@ -28,3 +28,41 @@ llego a 10. El 1 no es necesario. A cada número que uso le pongo `1`
 y al que no, `0`. El resultado es `1010`.
 
 Comprobación: 8 + 2 = 10.
+
+### Reglas para contar en binario
+
++ 1 Incrementar la columna del extremo derecho en 1
+ * Las columnas restantes se bajan
++  Cuando te quedes sin digitos:
+ * Incrementa la siguiente columna en 1
+
+## Sesión 2: cómo se guarda el texto
+
+### ASCII
+
+Es una tabla que le asigna un número a cada carácter del inglés para
+poder identificarlo. Tiene 128 caracteres, numerados del 0 al 127,
+porque eso es lo que cabe en 7 bits.
+
+### Unicode vs UTF-8
+
+Unicode amplía ASCII: le asigna un número único a cada carácter de
+todos los idiomas, incluidos símbolos y emojis.
+UTF-8 indica cuántos bytes usa cada carácter para guardarse.
+
+### Caracteres y bytes
+
+Se cuentan letra por letra. Por ejemplo, "Ñu" tiene 2 caracteres y
+3 bytes: la Ñ usa 2 bytes y la u usa 1.
+
+### Python
+
+El prefijo `0b` indica que un número está escrito en binario.
+Por ejemplo, `chr(0b1001101)` da `'M'`.
+
+`SyntaxError`: Python no puede leer el código porque está mal escrito.
+Ejemplo: `chr(01001101)`, porque un número no puede empezar con cero.
+
+`NameError`: el código se lee bien, pero usa un nombre que no existe.
+Ejemplo: `char(65)` en lugar de `chr(65)`.
+
